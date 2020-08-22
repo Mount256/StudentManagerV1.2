@@ -1,0 +1,87 @@
+# Project: TeacherAndLogin
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = TeacherAndLogin_private.res
+OBJ      = add.o browse.o delete.o depart.o enter.o exist.o find.o find_string.o login.o mainwelcome.o print.o pwa.o rebuild.o register.o revise.o welteacher.o welstudent.o findstu.o instruction.o $(RES)
+LINKOBJ  = add.o browse.o delete.o depart.o enter.o exist.o find.o find_string.o login.o mainwelcome.o print.o pwa.o rebuild.o register.o revise.o welteacher.o welstudent.o findstu.o instruction.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = TeacherAndLogin.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+add.o: add.c
+	$(CC) -c add.c -o add.o $(CFLAGS)
+
+browse.o: browse.c
+	$(CC) -c browse.c -o browse.o $(CFLAGS)
+
+delete.o: delete.c
+	$(CC) -c delete.c -o delete.o $(CFLAGS)
+
+depart.o: depart.c
+	$(CC) -c depart.c -o depart.o $(CFLAGS)
+
+enter.o: enter.c
+	$(CC) -c enter.c -o enter.o $(CFLAGS)
+
+exist.o: exist.c
+	$(CC) -c exist.c -o exist.o $(CFLAGS)
+
+find.o: find.c
+	$(CC) -c find.c -o find.o $(CFLAGS)
+
+find_string.o: find_string.c
+	$(CC) -c find_string.c -o find_string.o $(CFLAGS)
+
+login.o: login.c
+	$(CC) -c login.c -o login.o $(CFLAGS)
+
+mainwelcome.o: mainwelcome.c
+	$(CC) -c mainwelcome.c -o mainwelcome.o $(CFLAGS)
+
+print.o: print.c
+	$(CC) -c print.c -o print.o $(CFLAGS)
+
+pwa.o: pwa.c
+	$(CC) -c pwa.c -o pwa.o $(CFLAGS)
+
+rebuild.o: rebuild.c
+	$(CC) -c rebuild.c -o rebuild.o $(CFLAGS)
+
+register.o: register.c
+	$(CC) -c register.c -o register.o $(CFLAGS)
+
+revise.o: revise.c
+	$(CC) -c revise.c -o revise.o $(CFLAGS)
+
+welteacher.o: welteacher.c
+	$(CC) -c welteacher.c -o welteacher.o $(CFLAGS)
+
+welstudent.o: welstudent.c
+	$(CC) -c welstudent.c -o welstudent.o $(CFLAGS)
+
+findstu.o: findstu.c
+	$(CC) -c findstu.c -o findstu.o $(CFLAGS)
+
+instruction.o: instruction.c
+	$(CC) -c instruction.c -o instruction.o $(CFLAGS)
+
+TeacherAndLogin_private.res: TeacherAndLogin_private.rc 
+	$(WINDRES) -i TeacherAndLogin_private.rc --input-format=rc -o TeacherAndLogin_private.res -O coff 
+
